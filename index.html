@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>GLIO — AI Automation for Businesses | Stop drowning in manual work</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0b10'/%3E%3Ctext x='50%25' y='54%25' font-family='Arial' font-size='34' font-weight='800' fill='%235cf2c4' text-anchor='middle' dominant-baseline='middle'%3EG%3C/text%3E%3C/svg%3E">
 <meta name="description" content="GLIO builds done-for-you AI automation — customer support, data entry, reporting, follow-ups — so your team stops doing repetitive work. Based in Al Khobar, Saudi Arabia. Serving the GCC & worldwide.">
 <meta property="og:title" content="GLIO — AI Automation for Businesses">
 <meta property="og:description" content="Done-for-you AI automation. We map your repetitive workflows, build the automation, and run it. Book a free audit.">
@@ -153,6 +154,14 @@
   </div>
   <div class="trust reveal d4"><b>Based in Al Khobar, Saudi Arabia</b>
     · serving businesses across the GCC &amp; worldwide · bilingual (عربي / EN)</div>
+  <div dir="rtl" class="reveal d4" style="margin-top:14px;font-family:var(--body);
+    font-size:1.05rem;color:var(--dim);max-width:54ch">
+    نُؤتمت المهام اليدوية المتكررة في عملك بالذكاء الاصطناعي — دعم العملاء،
+    إدخال البيانات، التقارير والمتابعات.
+    <a href="https://wa.me/966552056371?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%AA%D8%AF%D9%82%D9%8A%D9%82%20%D8%A3%D8%AA%D9%85%D8%AA%D8%A9%20%D9%85%D8%AC%D8%A7%D9%86%D9%8A"
+      target="_blank" rel="noopener"
+      style="color:var(--acc);font-weight:600;white-space:nowrap">تدقيق مجاني عبر واتساب ←</a>
+  </div>
 </div></header>
 
 <section><div class="wrap">
@@ -305,5 +314,29 @@
   <a class="btn btn-g" href="tel:+966552056371">Call</a>
 </div>
 
+<script>
+  /* Conversion measurement — inert until you add an ID.
+     Paste your GA4 / Google Ads measurement ID below, e.g. "G-XXXXXXXXXX".
+     Then every WhatsApp / email / call click fires a 'generate_lead' event
+     you can import as a conversion in Google Ads. */
+  window.GLIO_GA = "";
+  (function(){
+    if(!window.GLIO_GA) return;
+    var s=document.createElement('script'); s.async=1;
+    s.src='https://www.googletagmanager.com/gtag/js?id='+window.GLIO_GA;
+    document.head.appendChild(s);
+    window.dataLayer=window.dataLayer||[];
+    window.gtag=function(){dataLayer.push(arguments)};
+    gtag('js',new Date()); gtag('config',window.GLIO_GA);
+  })();
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('a'); if(!a) return;
+    var h=a.getAttribute('href')||'', m=null;
+    if(h.indexOf('wa.me')>-1) m='whatsapp';
+    else if(h.indexOf('mailto:')===0) m='email';
+    else if(h.indexOf('tel:')===0) m='call';
+    if(m&&window.gtag) gtag('event','generate_lead',{method:m});
+  });
+</script>
 </body>
 </html>
