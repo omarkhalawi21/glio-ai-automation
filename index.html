@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GLIO — AI Automation for Businesses | Stop drowning in manual work</title>
+<meta name="description" content="GLIO builds done-for-you AI automation — customer support, data entry, reporting, follow-ups — so your team stops doing repetitive work. Based in Al Khobar, Saudi Arabia. Serving the GCC & worldwide.">
+<meta property="og:title" content="GLIO — AI Automation for Businesses">
+<meta property="og:description" content="Done-for-you AI automation. We map your repetitive workflows, build the automation, and run it. Book a free audit.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Schibsted+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0a0b10; --ink2:#11131c; --panel:#151826; --line:#242838;
+    --bone:#eef0f6; --dim:#9aa0b4; --faint:#646b82;
+    --acc:#5cf2c4; --acc2:#7aa2ff; --warn:#ffd267;
+    --disp:"Bricolage Grotesque",system-ui,sans-serif;
+    --body:"Schibsted Grotesk",system-ui,sans-serif;
+    --r:16px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--ink);color:var(--bone);font-family:var(--body);
+    font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+    background:
+      radial-gradient(60vw 50vh at 78% -5%,rgba(92,242,196,.16),transparent 60%),
+      radial-gradient(50vw 40vh at 8% 8%,rgba(122,162,255,.14),transparent 55%);}
+  .wrap{position:relative;z-index:1;max-width:1120px;margin:0 auto;padding:0 22px}
+  a{color:inherit;text-decoration:none}
+  h1,h2,h3{font-family:var(--disp);font-weight:800;line-height:1.04;
+    letter-spacing:-.02em}
+  .ey{font-family:var(--body);font-weight:600;font-size:13px;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--acc)}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--body);
+    font-weight:600;font-size:16px;padding:15px 26px;border-radius:999px;
+    transition:.18s;border:1px solid transparent;cursor:pointer;white-space:nowrap}
+  .btn-p{background:var(--acc);color:#062018}
+  .btn-p:hover{transform:translateY(-2px);box-shadow:0 12px 30px -10px rgba(92,242,196,.5)}
+  .btn-g{background:transparent;border-color:var(--line);color:var(--bone)}
+  .btn-g:hover{border-color:var(--acc);color:var(--acc)}
+  .btn-wa{background:#22c55e1a;border:1px solid #22c55e55;color:#7ee6a4}
+  .btn-wa:hover{background:#22c55e2e}
+  /* nav */
+  nav{position:sticky;top:0;z-index:20;backdrop-filter:blur(10px);
+    background:rgba(10,11,16,.72);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;
+    padding-top:16px;padding-bottom:16px}
+  .logo{font-family:var(--disp);font-weight:800;font-size:23px;letter-spacing:-.02em}
+  .logo b{color:var(--acc)}
+  .logo span{font-family:var(--body);font-weight:500;font-size:12px;
+    color:var(--faint);letter-spacing:.12em;text-transform:uppercase;margin-left:10px}
+  nav .btn{padding:11px 20px;font-size:14px}
+  @media(max-width:680px){.logo span{display:none}}
+  /* hero */
+  .hero{padding:84px 0 70px;text-align:left}
+  .hero h1{font-size:clamp(2.5rem,6.4vw,4.6rem);max-width:16ch;margin:18px 0 0}
+  .hero h1 em{font-style:normal;color:var(--acc);
+    background:linear-gradient(transparent 62%,rgba(92,242,196,.22) 0);}
+  .hero p.sub{font-size:clamp(1.05rem,2.2vw,1.3rem);color:var(--dim);
+    max-width:54ch;margin:24px 0 32px}
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+  .trust{margin-top:26px;font-size:14px;color:var(--faint)}
+  .trust b{color:var(--dim);font-weight:600}
+  .reveal{opacity:0;transform:translateY(18px);
+    animation:rise .8s cubic-bezier(.2,.7,.2,1) forwards}
+  .d1{animation-delay:.05s}.d2{animation-delay:.13s}.d3{animation-delay:.21s}
+  .d4{animation-delay:.29s}
+  @keyframes rise{to{opacity:1;transform:none}}
+  section{padding:64px 0;border-top:1px solid var(--line)}
+  .shead{max-width:60ch}
+  .shead h2{font-size:clamp(1.8rem,4vw,2.7rem);margin:12px 0 0}
+  .shead p{color:var(--dim);margin-top:14px;font-size:1.05rem}
+  .grid{display:grid;gap:18px;margin-top:40px}
+  .g2{grid-template-columns:repeat(2,1fr)}
+  .g3{grid-template-columns:repeat(3,1fr)}
+  @media(max-width:860px){.g2,.g3{grid-template-columns:1fr}}
+  .card{background:linear-gradient(180deg,var(--panel),var(--ink2));
+    border:1px solid var(--line);border-radius:var(--r);padding:26px}
+  .card h3{font-size:1.18rem;margin-bottom:9px;font-family:var(--body);
+    font-weight:600;letter-spacing:0}
+  .card p{color:var(--dim);font-size:.98rem}
+  .card .ic{width:42px;height:42px;border-radius:11px;display:grid;
+    place-items:center;background:rgba(92,242,196,.12);color:var(--acc);
+    font-size:20px;margin-bottom:16px}
+  .pain .ic{background:rgba(255,210,103,.12);color:var(--warn)}
+  /* steps */
+  .steps{counter-reset:s}
+  .step{display:flex;gap:22px;padding:24px 0;border-bottom:1px solid var(--line)}
+  .step:last-child{border-bottom:0}
+  .step .n{counter-increment:s;font-family:var(--disp);font-weight:800;
+    font-size:2.4rem;color:var(--acc2);min-width:64px;line-height:1}
+  .step .n::before{content:"0" counter(s)}
+  .step h3{font-size:1.3rem;margin-bottom:6px}
+  .step p{color:var(--dim)}
+  /* stats */
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;
+    text-align:center;margin-top:34px}
+  @media(max-width:860px){.stats{grid-template-columns:1fr}}
+  .stat{background:var(--ink2);border:1px solid var(--line);
+    border-radius:var(--r);padding:30px 18px}
+  .stat .b{font-family:var(--disp);font-weight:800;font-size:2.6rem;
+    color:var(--acc)}
+  .stat .l{color:var(--dim);font-size:.95rem;margin-top:6px}
+  .ph{outline:1px dashed #5a4a2a;background:rgba(255,210,103,.06)}
+  /* faq */
+  details{border:1px solid var(--line);border-radius:14px;padding:0;
+    margin-bottom:12px;background:var(--ink2);overflow:hidden}
+  summary{padding:20px 22px;cursor:pointer;font-weight:600;list-style:none;
+    display:flex;justify-content:space-between;gap:16px;align-items:center}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";color:var(--acc);font-size:1.4rem;
+    font-family:var(--disp)}
+  details[open] summary::after{content:"–"}
+  details p{padding:0 22px 22px;color:var(--dim)}
+  /* final cta */
+  .final{text-align:center;background:
+    radial-gradient(60vw 40vh at 50% 0,rgba(92,242,196,.16),transparent 60%)}
+  .final h2{font-size:clamp(2rem,5vw,3.2rem);max-width:18ch;margin:0 auto}
+  .final p{color:var(--dim);max-width:48ch;margin:18px auto 30px}
+  .final .cta-row{justify-content:center}
+  footer{border-top:1px solid var(--line);padding:46px 0 120px;color:var(--faint);
+    font-size:14px}
+  footer .wrap{display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between}
+  footer a{color:var(--dim)} footer a:hover{color:var(--acc)}
+  /* sticky mobile cta */
+  .sticky{position:fixed;left:0;right:0;bottom:0;z-index:30;display:none;
+    gap:10px;padding:12px 16px calc(12px + env(safe-area-inset-bottom));
+    background:rgba(10,11,16,.92);backdrop-filter:blur(10px);
+    border-top:1px solid var(--line)}
+  .sticky .btn{flex:1;justify-content:center;padding:14px}
+  @media(max-width:680px){.sticky{display:flex}footer{padding-bottom:96px}}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <div class="logo">GL<b>I</b>O <span>AI Automation</span></div>
+  <a class="btn btn-p" href="__BOOKING_LINK__">Book a free audit</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div class="ey reveal d1">AI Automation · done for you</div>
+  <h1 class="reveal d2">Stop paying people to do work a <em>machine should do</em>.</h1>
+  <p class="sub reveal d3">GLIO builds and runs AI automation for your business —
+    customer support, data entry, reporting, follow-ups, repetitive admin.
+    You stop drowning in busywork. Your team gets its hours back.</p>
+  <div class="cta-row reveal d4">
+    <a class="btn btn-p" href="__BOOKING_LINK__">Book a free 20-min automation audit →</a>
+    <a class="btn btn-wa" href="https://wa.me/__WHATSAPP_INTL__" target="_blank" rel="noopener">WhatsApp us</a>
+  </div>
+  <div class="trust reveal d4"><b>Based in Al Khobar, Saudi Arabia</b>
+    · serving businesses across the GCC &amp; worldwide · bilingual (عربي / EN)</div>
+</div></header>
+
+<section><div class="wrap">
+  <div class="shead">
+    <div class="ey">If this is your week…</div>
+    <h2>You didn't start a business to babysit spreadsheets.</h2>
+    <p>Most teams lose 10–20 hours a week to work that doesn't need a human.
+      That's the cost we remove.</p>
+  </div>
+  <div class="grid g2 pain">
+    <div class="card"><div class="ic">✦</div><h3>The support inbox never empties</h3>
+      <p>The same questions, every day — order status, pricing, “is this in stock”.
+        A person retypes the same answers for hours.</p></div>
+    <div class="card"><div class="ic">✦</div><h3>Your team copies data between tools</h3>
+      <p>From the form to the sheet to the CRM to the invoice. Manual, slow,
+        and one typo from a costly mistake.</p></div>
+    <div class="card"><div class="ic">✦</div><h3>Reports eat whole days</h3>
+      <p>Someone pulls numbers from five places into a deck every week instead
+        of doing the work that actually moves revenue.</p></div>
+    <div class="card"><div class="ic">✦</div><h3>Leads &amp; follow-ups slip</h3>
+      <p>Enquiries go cold because no one followed up in time. Money walks out
+        the door, quietly.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="shead">
+    <div class="ey">What we automate</div>
+    <h2>Done-for-you. You don't touch the tech.</h2>
+    <p>We don't sell you software to figure out. We build the automation around
+      how your business already works — and we run it.</p>
+  </div>
+  <div class="grid g3">
+    <div class="card"><div class="ic">◍</div><h3>AI customer support</h3>
+      <p>A trained assistant that answers your customers instantly on
+        WhatsApp, web &amp; email — in Arabic and English — and hands the hard
+        ones to your team.</p></div>
+    <div class="card"><div class="ic">⇄</div><h3>Workflow &amp; tool integration</h3>
+      <p>Your forms, sheets, CRM, store and accounting — connected so data
+        moves itself, with no copy-paste.</p></div>
+    <div class="card"><div class="ic">⊞</div><h3>Data entry &amp; documents</h3>
+      <p>Invoices, orders, PDFs and emails read and entered automatically,
+        accurately, around the clock.</p></div>
+    <div class="card"><div class="ic">▤</div><h3>Reporting &amp; dashboards</h3>
+      <p>Live numbers that build themselves — daily/weekly, no one pulling
+        them by hand.</p></div>
+    <div class="card"><div class="ic">➤</div><h3>Lead follow-up</h3>
+      <p>Every enquiry answered and chased on time, automatically, until it
+        converts or closes.</p></div>
+    <div class="card"><div class="ic">✲</div><h3>Custom internal AI</h3>
+      <p>A private assistant trained on your own docs &amp; processes, so staff
+        get answers in seconds instead of digging.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="shead"><div class="ey">How it works</div>
+    <h2>Three steps. Weeks, not months.</h2></div>
+  <div class="steps" style="margin-top:30px">
+    <div class="step"><div class="n"></div><div>
+      <h3>Free automation audit</h3>
+      <p>A 20-minute call. We map the repetitive workflows draining your team
+        and put a number on the hours &amp; cost they're burning. You get the
+        plan whether you hire us or not.</p></div></div>
+    <div class="step"><div class="n"></div><div>
+      <h3>We build it</h3>
+      <p>Done-for-you, typically 2–4 weeks. We build, test against your real
+        process, and train it on your business. You review — we refine.</p></div></div>
+    <div class="step"><div class="n"></div><div>
+      <h3>It runs — and we keep it sharp</h3>
+      <p>It works in the background. We monitor, maintain and improve it, and
+        you see exactly how many hours it's saving every month.</p></div></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="shead"><div class="ey">What good looks like</div>
+    <h2>The point is hours back and money kept.</h2>
+    <p style="color:var(--faint);font-size:.9rem">↓ Replace with your real
+      client numbers before publishing — honest, specific figures convert.</p></div>
+  <div class="stats">
+    <div class="stat ph"><div class="b">12+ hrs</div><div class="l">saved / week per automated workflow</div></div>
+    <div class="stat ph"><div class="b">&lt;60s</div><div class="l">customer first-response, 24/7</div></div>
+    <div class="stat ph"><div class="b">2–4 wks</div><div class="l">from audit to live</div></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="shead"><div class="ey">Why GLIO</div>
+    <h2>A local team that ships outcomes, not jargon.</h2></div>
+  <div class="grid g2" style="margin-top:30px">
+    <div class="card"><h3>🇸🇦 Here, and bilingual</h3><p>Based in Al Khobar —
+      we work in Arabic and English, in your timezone, with the GCC market
+      built in. Not an overseas team you can't reach.</p></div>
+    <div class="card"><h3>Done-for-you, not DIY</h3><p>You don't learn tools
+      or manage a build. We deliver a working automation and operate it.</p></div>
+    <div class="card"><h3>Priced to ROI</h3><p>We start from the hours and
+      cost you'll save. If the math doesn't work, we'll tell you on the
+      audit call.</p></div>
+    <div class="card"><h3>Your data stays yours</h3><p>We use trusted,
+      enterprise-grade providers and lock down access. We'll walk you through
+      exactly how on the call.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="shead"><div class="ey">Questions</div><h2>Straight answers.</h2></div>
+  <div style="margin-top:30px">
+    <details><summary>Is my business too small for this?</summary>
+      <p>Usually the opposite — small teams feel manual work the most. If you
+        have even one repetitive task eating hours a week, there's ROI. The
+        audit tells you honestly.</p></details>
+    <details><summary>What does it cost?</summary>
+      <p>It depends on what we automate, but we anchor every quote to the hours
+        and cost you'll save — so it pays for itself or we say so upfront.
+        The audit is free.</p></details>
+    <details><summary>Do I need technical staff?</summary>
+      <p>No. That's the point of done-for-you. We build it and run it; your
+        team just stops doing the manual work.</p></details>
+    <details><summary>How long until it's live?</summary>
+      <p>Most automations go live in 2–4 weeks from the audit, depending on
+        scope.</p></details>
+    <details><summary>Is my data safe?</summary>
+      <p>Yes — we use established enterprise providers, restrict access to
+        what's needed, and explain the setup transparently before anything
+        is built.</p></details>
+  </div>
+</div></section>
+
+<section class="final"><div class="wrap">
+  <h2>Find out what an hour of your team is being wasted on.</h2>
+  <p>Free 20-minute automation audit. You leave with a concrete plan and the
+    number — hire us or not.</p>
+  <div class="cta-row">
+    <a class="btn btn-p" href="__BOOKING_LINK__">Book the free audit →</a>
+    <a class="btn btn-wa" href="https://wa.me/__WHATSAPP_INTL__" target="_blank" rel="noopener">Or message us on WhatsApp</a>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div><strong style="color:var(--bone)">GLIO</strong> — AI Automation &amp;
+    Growth · Al Khobar, Saudi Arabia</div>
+  <div>
+    <a href="mailto:glioagency.sa@gmail.com">glioagency.sa@gmail.com</a> ·
+    <a href="https://wa.me/__WHATSAPP_INTL__">WhatsApp</a> ·
+    <a href="https://glioagency.org" target="_blank" rel="noopener">glioagency.org</a>
+  </div>
+</div></footer>
+
+<div class="sticky">
+  <a class="btn btn-p" href="__BOOKING_LINK__">Free audit</a>
+  <a class="btn btn-wa" href="https://wa.me/__WHATSAPP_INTL__">WhatsApp</a>
+</div>
+
+</body>
+</html>
